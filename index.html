@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iXBRL file explorer</title>
+    <script type="text/javascript" src="main.js" defer=""></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            grid-gap: 10px;
+            min-height: 100vh;
+        }
+        aside {
+            background-color: #eee;
+            padding: 10px;
+        }
+        aside h1 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        main > iframe {
+            border: none;
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <h1>iXBRL file viewer</h1>
+        <input type="file" id="file" name="file" accept=".xml,.xbrl,.ixbrl,.xhtml,.html" autocomplete="off" />
+    </aside>
+    <main>
+        <iframe id="iframe" src="about:blank"></iframe>
+    </main>
+</body>
